@@ -19,6 +19,7 @@ img {
   height: auto;
   margin-top: 20px;
   border-radius: 5px;
+  border: 2px dashed red; /* <- temporal para ver el marco de la imagen */
 }
 
 #mensaje {
