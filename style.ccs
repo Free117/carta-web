@@ -27,6 +27,21 @@ img {
   color: #b00;
   margin-top: 20px;
 }
+.boton-descarga {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.boton-descarga:hover {
+  background-color: #004a99;
+}
 
 .oculto {
   display: none;
