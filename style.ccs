@@ -3,6 +3,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   padding: 2em;
+  margin: 0;
 }
 
 .container {
@@ -19,30 +20,10 @@ img {
   height: auto;
   margin-top: 20px;
   border-radius: 5px;
-  border: 2px dashed red; /* <- temporal para ver el marco de la imagen */
+  border: 2px dashed red; /* Si ya no necesitas el borde, elimínalo */
 }
 
 #mensaje {
   font-size: 1.2em;
   color: #b00;
-  margin-top: 20px;
-}
-.boton-descarga {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #0066cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.boton-descarga:hover {
-  background-color: #004a99;
-}
-
-.oculto {
-  display: none;
-}
+  margin-top: 20p
