@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #ffebf3 0%, #ffd6e7 100%);
+  background: linear-gradient(135deg, #ffd6e7 0%, #ffb3d9 100%);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
@@ -18,12 +18,12 @@ body {
   z-index: 10;
 }
 
-h1 {
+h1, .titulo-carta {
   font-family: 'Dancing Script', cursive;
-  font-size: 3.5em;
+  font-size: 3em;
   color: #d6336c;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .container {
@@ -48,21 +48,6 @@ h1 {
   color: white;
   margin: 20px 0;
   position: relative;
-  overflow: hidden;
-}
-
-.sobre-cerrado::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background: linear-gradient(45deg, #ff6b8b, #ffcce6, #ff6b8b);
-  background-size: 200% 200%;
-  animation: brillo 3s linear infinite;
-  opacity: 0.3;
-  z-index: -1;
 }
 
 .corazon-sobre {
@@ -71,66 +56,32 @@ h1 {
   animation: latido 1.8s infinite;
 }
 
-.instruccion {
-  font-style: italic;
-  font-size: 1.4em;
-  margin-top: 15px;
-}
-
 .sobre-abierto {
   animation: aparecer 1s ease;
 }
 
-.titulo-carta {
-  font-family: 'Dancing Script', cursive;
-  font-size: 3em;
-  color: #d6336c;
-  margin-bottom: 30px;
-}
-
-.contenedor-carta {
+#contenedor-imagen {
   margin: 20px auto;
   max-width: 100%;
+  display: none;
+}
+
+#contenedor-imagen img {
+  width: 100%;
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.8s ease;
+  border: 2px solid #ffb3d9;
 }
 
-.contenedor-carta.mostrar {
-  opacity: 1;
-  transform: scale(1);
-}
-
-#mensaje {
-  font-size: 1.2em;
-  color: #666;
-  margin: 30px 0;
-  line-height: 1.6;
-  padding: 20px;
-  border-radius: 10px;
-  background: rgba(255, 230, 240, 0.7);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease 0.3s;
-}
-
-#mensaje.mostrar {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.boton-corazon {
+.boton-corazon, .boton-descarga {
   display: inline-block;
   background: linear-gradient(135deg, #ff6b8b 0%, #d6336c 100%);
   color: #fff;
-  padding: 16px 40px;
+  padding: 15px 35px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.1em;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
@@ -138,28 +89,27 @@ h1 {
   margin-top: 20px;
 }
 
-.boton-corazon:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(214, 51, 108, 0.6);
+.boton-descarga {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.boton-descarga.mostrar {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .oculto {
   display: none;
 }
 
-.corazones {
+.efectos {
   position: absolute;
   width: 100%;
   height: 100%;
   pointer-events: none;
   z-index: 1;
-}
-
-.corazon {
-  position: absolute;
-  font-size: 2em;
-  opacity: 0;
-  animation: caer 10s linear infinite;
 }
 
 @keyframes fadeIn {
@@ -178,44 +128,17 @@ h1 {
   100% { transform: scale(1); }
 }
 
-@keyframes brillo {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes caer {
-  0% {
-    transform: translateY(-10vh) rotate(0deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.8;
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
 @media (max-width: 600px) {
   .container {
     padding: 25px;
     margin: 15px;
   }
   
-  h1 {
+  h1, .titulo-carta {
     font-size: 2.5em;
   }
   
   .sobre-cerrado {
     padding: 40px 25px;
-  }
-  
-  .titulo-carta {
-    font-size: 2.5em;
   }
 }
