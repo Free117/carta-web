@@ -1,34 +1,36 @@
 body {
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  background: linear-gradient(135deg, #ffe4ec 0%, #ffdada 100%);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 2em;
-  text-align: center;
-  color: #4b2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-  background-color: #fff5f0;
+  background-color: #fff0f5;
   max-width: 700px;
-  margin: auto;
   padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
   animation: fadeIn 1s ease;
 }
 
 h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.8em;
-  color: #b23a48;
+  font-size: 3em;
+  color: #d6336c;
   margin-bottom: 20px;
 }
 
 img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
@@ -36,25 +38,36 @@ img {
   font-size: 1.2em;
   color: #6a1b1a;
   margin-bottom: 30px;
+  background: #fff7f9;
+  padding: 15px;
+  border-radius: 10px;
+  font-style: italic;
 }
 
 .boton-descarga {
   display: inline-block;
-  background-color: #b23a48;
+  background-color: #d6336c;
   color: #fff;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 30px;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1em;
+  transition: all 0.3s ease;
 }
 
 .boton-descarga:hover {
-  background-color: #8e2a34;
+  background-color: #a61e4d;
   transform: scale(1.05);
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
