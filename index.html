@@ -3,36 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Una sorpresa especial</title>
+  <title>Una sorpresa de amor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
   <div class="inicio" id="inicio">
-    <h1>Para el amor de mi vida...</h1>
-    <button id="btn-empezar" class="boton-corazon">💝 Presiona aquí</button>
+    <h1>Para mi persona favorita...</h1>
+    <button id="btn-empezar" class="boton-corazon">✨ Descubre tu sorpresa</button>
   </div>
 
   <div class="container oculto" id="contenido-principal">
     <div class="sobre-cerrado" id="sobre-cerrado">
-      <div class="corazon-sobre">✉️</div>
-      <p class="instruccion">Toca para abrir tu sorpresa</p>
+      <div class="corazon-sobre">💌</div>
+      <p class="instruccion">Abre con cuidado...</p>
     </div>
     <div class="sobre-abierto oculto" id="sobre-abierto">
-      <h2 class="titulo-carta">Para ti, mi amor...</h2>
-      <div class="contenedor-carta oculto" id="contenedor-carta">
-        <!-- La imagen se insertará aquí dinámicamente -->
-      </div>
-      <div id="mensaje" class="oculto">
-        <p>Este momento es solo para nosotros...</p>
-      </div>
+      <h2 class="titulo-carta">Para ti, con todo mi amor</h2>
+      <div id="contenedor-imagen"></div>
+      <a href="#" id="boton-descarga" class="boton-descarga oculto">💾 Guardar este recuerdo</a>
     </div>
   </div>
 
-  <div class="corazones"></div>
+  <div class="efectos"></div>
 
   <script src="script.js"></script>
 </body>
