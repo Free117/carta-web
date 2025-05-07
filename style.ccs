@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #ffcce6 0%, #ffb3d9 50%, #ff99cc 100%);
+  background: linear-gradient(135deg, #ffebf3 0%, #ffd6e7 100%);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
@@ -20,105 +20,127 @@ body {
 
 h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 3em;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-size: 3.5em;
+  color: #d6336c;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   margin-bottom: 40px;
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   max-width: 600px;
   padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(214, 51, 108, 0.2);
   text-align: center;
   display: none;
   position: relative;
   z-index: 5;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,0.3);
 }
 
 .sobre-cerrado {
-  background: linear-gradient(135deg, #ff4d88 0%, #ff1a75 100%);
-  padding: 50px 30px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #ff85a2 0%, #ff6b8b 100%);
+  padding: 60px 40px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease;
-  box-shadow: 0 10px 25px rgba(255, 26, 117, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 107, 139, 0.4);
   color: white;
   margin: 20px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.sobre-cerrado:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(255, 26, 117, 0.6);
+.sobre-cerrado::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #ff6b8b, #ffcce6, #ff6b8b);
+  background-size: 200% 200%;
+  animation: brillo 3s linear infinite;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .corazon-sobre {
   font-size: 4em;
   margin-bottom: 20px;
-  animation: latido 1.5s infinite;
-  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+  animation: latido 1.8s infinite;
 }
 
 .instruccion {
   font-style: italic;
-  font-size: 1.3em;
+  font-size: 1.4em;
   margin-top: 15px;
 }
 
 .sobre-abierto {
-  animation: aparecer 1.5s ease;
+  animation: aparecer 1s ease;
 }
 
 .titulo-carta {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.8em;
-  color: #ff1a75;
+  font-size: 3em;
+  color: #d6336c;
   margin-bottom: 30px;
 }
 
-.imagen-carta {
-  width: 100%;
-  max-height: 70vh;
-  object-fit: contain;
+.contenedor-carta {
+  margin: 20px auto;
+  max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  margin-bottom: 25px;
-  border: 2px solid #ffb3d9;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease;
+}
+
+.contenedor-carta.mostrar {
+  opacity: 1;
+  transform: scale(1);
 }
 
 #mensaje {
   font-size: 1.2em;
   color: #666;
-  margin: 25px 0;
+  margin: 30px 0;
   line-height: 1.6;
-  background: rgba(255, 230, 240, 0.7);
   padding: 20px;
   border-radius: 10px;
+  background: rgba(255, 230, 240, 0.7);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.3s;
 }
 
-.boton-descarga, .boton-corazon {
+#mensaje.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.boton-corazon {
   display: inline-block;
-  background: linear-gradient(135deg, #ff1a75 0%, #e6005c 100%);
+  background: linear-gradient(135deg, #ff6b8b 0%, #d6336c 100%);
   color: #fff;
-  padding: 15px 35px;
+  padding: 16px 40px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.2em;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(255, 26, 117, 0.4);
+  box-shadow: 0 5px 15px rgba(214, 51, 108, 0.4);
   margin-top: 20px;
 }
 
-.boton-descarga:hover, .boton-corazon:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(255, 26, 117, 0.6);
+.boton-corazon:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(214, 51, 108, 0.6);
 }
 
 .oculto {
@@ -135,14 +157,14 @@ h1 {
 
 .corazon {
   position: absolute;
-  font-size: 1.8em;
+  font-size: 2em;
   opacity: 0;
   animation: caer 10s linear infinite;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes aparecer {
@@ -154,6 +176,12 @@ h1 {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+@keyframes brillo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes caer {
@@ -180,14 +208,14 @@ h1 {
   }
   
   h1 {
-    font-size: 2.2em;
-  }
-  
-  .titulo-carta {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
   
   .sobre-cerrado {
-    padding: 30px 20px;
+    padding: 40px 25px;
+  }
+  
+  .titulo-carta {
+    font-size: 2.5em;
   }
 }
