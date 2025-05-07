@@ -1,29 +1,38 @@
 body {
-  background-color: #f2f2f2;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   padding: 2em;
   margin: 0;
+  color: #333;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.01);
 }
 
 img {
   max-width: 100%;
   height: auto;
   margin-top: 20px;
-  border-radius: 5px;
-  border: 2px dashed red; /* Si ya no necesitas el borde, elimínalo */
+  border-radius: 8px;
+  border: none; /* Quité el borde rojo punteado */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #mensaje {
-  font-size: 1.2em;
-  color: #b00;
-  margin-top: 20p
+  font-size: 1.3em;
+  color: #d9534f;
+  margin-top: 20px;
+  font-weight: 500;
+}
