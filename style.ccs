@@ -1,55 +1,60 @@
 body {
-  background: linear-gradient(to right, #f8f9fa, #e9ecef);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  padding: 2em;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
-  color: #333;
+  padding: 2em;
+  text-align: center;
+  color: #4b2e2e;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  background-color: #fff5f0;
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease;
 }
 
-.container:hover {
-  transform: scale(1.01);
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8em;
+  color: #b23a48;
+  margin-bottom: 20px;
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-top: 20px;
-  border-radius: 8px;
-  border: none; /* Quité el borde rojo punteado */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 #mensaje {
-  font-size: 1.3em;
-  color: #d9534f;
-  margin-top: 20px;
-  font-weight: 500;
+  font-size: 1.2em;
+  color: #6a1b1a;
+  margin-bottom: 30px;
 }
 
 .boton-descarga {
   display: inline-block;
-  margin-top: 25px;
+  background-color: #b23a48;
+  color: #fff;
   padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 6px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .boton-descarga:hover {
-  background-color: #0056b3;
+  background-color: #8e2a34;
   transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
