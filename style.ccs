@@ -2,143 +2,97 @@ body {
   background: linear-gradient(135deg, #ffd6e7 0%, #ffb3d9 100%);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.inicio {
   text-align: center;
-  padding: 2em;
-  animation: fadeIn 2s ease;
-  z-index: 10;
+  transition: all 0.5s ease;
 }
 
-h1, .titulo-carta {
+h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 3em;
   color: #d6336c;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
-.container {
-  background-color: rgba(255, 255, 255, 0.95);
-  max-width: 600px;
+.pantalla-inicial, .contenedor-carta {
+  transition: all 0.5s ease;
+}
+
+.contenedor-carta {
+  background-color: white;
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(214, 51, 108, 0.2);
-  text-align: center;
-  display: none;
-  position: relative;
-  z-index: 5;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 600px;
+  width: 90%;
+  opacity: 0;
 }
 
-.sobre-cerrado {
+.sobre {
   background: linear-gradient(135deg, #ff85a2 0%, #ff6b8b 100%);
-  padding: 60px 40px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  box-shadow: 0 8px 20px rgba(255, 107, 139, 0.4);
+  padding: 50px;
+  border-radius: 10px;
   color: white;
-  margin: 20px 0;
-  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.corazon-sobre {
-  font-size: 4em;
-  margin-bottom: 20px;
-  animation: latido 1.8s infinite;
+.sobre:hover {
+  transform: scale(1.02);
 }
 
-.sobre-abierto {
-  animation: aparecer 1s ease;
+.sobre div {
+  font-size: 3em;
+  margin-bottom: 15px;
+  animation: latido 1.5s infinite;
 }
 
-#contenedor-imagen {
-  margin: 20px auto;
-  max-width: 100%;
-  display: none;
-}
-
-#contenedor-imagen img {
+.carta img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
   border: 2px solid #ffb3d9;
-}
-
-.boton-corazon, .boton-descarga {
-  display: inline-block;
-  background: linear-gradient(135deg, #ff6b8b 0%, #d6336c 100%);
-  color: #fff;
-  padding: 15px 35px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1em;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(214, 51, 108, 0.4);
-  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .boton-descarga {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b8b 0%, #d6336c 100%);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
-.boton-descarga.mostrar {
-  opacity: 1;
-  transform: translateY(0);
+.boton-descarga:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(214, 51, 108, 0.4);
 }
 
-.oculto {
-  display: none;
+#btn-comenzar {
+  background: linear-gradient(135deg, #ff6b8b 0%, #d6336c 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.efectos {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes aparecer {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+#btn-comenzar:hover {
+  transform: scale(1.05);
 }
 
 @keyframes latido {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
-}
-
-@media (max-width: 600px) {
-  .container {
-    padding: 25px;
-    margin: 15px;
-  }
-  
-  h1, .titulo-carta {
-    font-size: 2.5em;
-  }
-  
-  .sobre-cerrado {
-    padding: 40px 25px;
-  }
 }
