@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Una sorpresa de amor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta Especial</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="inicio" id="inicio">
-    <h1>Para mi persona favorita...</h1>
-    <button id="btn-empezar" class="boton-corazon">✨ Descubre tu sorpresa</button>
+  <div class="pantalla-inicial" id="pantalla-inicial">
+    <h1>Para ti, con todo mi amor</h1>
+    <button id="btn-comenzar">💝 Haz clic aquí</button>
   </div>
 
-  <div class="container oculto" id="contenido-principal">
-    <div class="sobre-cerrado" id="sobre-cerrado">
-      <div class="corazon-sobre">💌</div>
-      <p class="instruccion">Abre con cuidado...</p>
+  <div class="contenedor-carta" id="contenedor-carta" style="display:none;">
+    <div class="sobre" id="sobre">
+      <div>💌</div>
+      <p>Toca el sobre para abrir</p>
     </div>
-    <div class="sobre-abierto oculto" id="sobre-abierto">
-      <h2 class="titulo-carta">Para ti, con todo mi amor</h2>
-      <div id="contenedor-imagen"></div>
-      <a href="#" id="boton-descarga" class="boton-descarga oculto">💾 Guardar este recuerdo</a>
+    <div class="carta" id="carta" style="display:none;">
+      <img src="carta.jpg" alt="Carta de amor">
+      <a href="carta.jpg" download="carta_especial.jpg" class="boton-descarga">💾 Guardar para siempre</a>
     </div>
   </div>
-
-  <div class="efectos"></div>
 
   <script src="script.js"></script>
 </body>
