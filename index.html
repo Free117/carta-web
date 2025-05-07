@@ -3,20 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carta para ti</title>
+  <title>Una carta especial para ti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2" /> <!-- Asegúrate de que el nombre coincida -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
-  <div class="container">
-    <h1>Una carta en tu día especial 💖</h1>
-    <img src="carta.jpg" alt="Carta escaneada" />
-    <div id="mensaje">
-      <p>Guarda esta carta con todo mi cariño, porque en ella va un pedacito de mi corazón ❤️</p>
-    </div>
-    <a href="carta.jpg" download class="boton-descarga">📥 Descargar carta</a>
+  <div class="inicio" id="inicio">
+    <h1>Para la persona más especial de mi vida...</h1>
+    <button id="btn-empezar" class="boton-corazon">❤️ Toca mi corazón</button>
   </div>
+
+  <div class="container oculto" id="contenido-principal">
+    <h1 class="titulo-carta">Para ti, mi amor...</h1>
+    <div class="sobre" id="sobre">
+      <div class="sobre-cerrado" id="sobre-cerrado">
+        <div class="corazon-sobre">💌</div>
+        <p class="instruccion">Abre este sobre con cuidado...</p>
+      </div>
+      <div class="sobre-abierto oculto" id="sobre-abierto">
+        <img src="carta.jpg" alt="Carta de amor" class="imagen-carta"/>
+        <div id="mensaje">
+          <p>Esta carta contiene todo lo que siento por ti en este día especial. Cada palabra fue escrita con el corazón, cada línea lleva un pedazo de mi amor.</p>
+          <p>Guárdala como el tesoro que eres para mí. Te amo más de lo que las palabras pueden expresar. ❤️</p>
+        </div>
+        <a href="carta.jpg" download class="boton-descarga">📥 Guardar para siempre</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="flores">
+    <div class="flor">🌹</div>
+    <div class="flor">🌸</div>
+    <div class="flor">🌷</div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
